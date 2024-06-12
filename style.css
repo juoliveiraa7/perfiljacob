@@ -1,0 +1,16 @@
+/* Varíaveis das Cores */
+/* TEMA DARK */
+:root, :root[data-theme='dark'] {
+    --primary-color: #f0f0f0; /*cor principal dos textos*/
+    --primary-bg-color: #111217; /*cor principal fundo*/
+    /* bg = background == cor de fundo */
+   
+}
+/* TEMA LIGHT */
+:root[data-theme='light'] {
+    --primary-color: #000; /* cor principal textos*/
+    --primary-bg-color: #f0f2f5;
+body { 
+    background: var(--primary-bg-color);/*cor fundos*/
+    color: var(--primary-color); /*cor geral dos textos*/
+}
