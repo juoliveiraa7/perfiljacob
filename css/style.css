@@ -5,23 +5,75 @@
 
 
 
-
-
 /* Varíaveis das Cores */
 /* TEMA DARK */
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0; /*cor principal dos textos*/
     --primary-bg-color: #111217; /*cor principal fundo*/
     /* bg = background == cor de fundo */
-   
+    --secundary-by-color: #28292E; /* cor de fundo */
+
+    --primary-border-color: #28292E; /* cor primaria para borda */
+    --secundary-boder-color: #56575A; /* cor secundaria para borda */
+
+    --tittle-color: #f0f0f0; /* cor de titulo */
+    --link-hover: #f0f0f0; /* cor de texto */
+    --link-color: #8f8f8f; /* cor de linl */
+    --icon-color: #c7c8c9;  
 }
-/* TEMA LIGHT */
+
+
+/*light= cores para a função dia*/
 :root[data-theme='light'] {
     --primary-color: #000; /* cor principal textos*/
     --primary-bg-color: #f0f2f5;   
 }
     
-body { 
-    background: var(--primary-bg-color);/*cor fundos*/
+/* reset css */
+* {
+    margin: 0;
+    padding: 0; /* preenchimento */
+    box-sizing: border-box; /* direcionamento das caixas */
+    vertical-align: baseline; /* alinhamento vertical */
+    list-style: none; /* estilo de lista ou remover bolinhas */
+    scrollbar-width: thin; /* afinar barra de rolagem */
+    scrollbar-width: var(--secundary-boder-color) transparent; /* colocar cor na barra de rolagem */
+}
+
+body {
+    background: var(--primary-bg-color); /*cor de fundo*/
     color: var(--primary-color); /*cor geral dos textos*/
+    font-family: 'playwhite' , Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none; /* tirar o link das palavras */
+    color: var(--link-color); /* mudar a cor das janelas */
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+i {
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap; /* coloca o conteudo em linha e permite a quebra de linha */
+    justify-content: space-between; /* os itens dentro do container flexivel serao distribuidos de
+    maneira uniforme ao longo do eixo principal, com espaços iguais entre eles. */
+
+    align-items: center; /* alinhar os itens, seja levados as informações/fotos, em uma direção
+    sendo a direita, esquerda ou meio.*/
+
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2; /* sobreposição/profundidade */
+}
+
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;
 }
