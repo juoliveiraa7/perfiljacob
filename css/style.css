@@ -129,12 +129,12 @@ i {
 }
 
 .menu-text {
-    font-size: .75rem;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    text-transform: capitalize;
 }
 
 .header-nav {
-    display: none;
+    display: n;
 }
 
 .menu-principal {
