@@ -219,6 +219,17 @@ html [data-theme= 'light'] .logo2 {
     gap: 2rem;
 }
 
+.projetos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .card-cover {
     width: 100%;
     border-radius: 2rem;
@@ -289,5 +300,46 @@ html [data-theme= 'light'] .logo2 {
     }
     .header-nav {
         display: flex;
+    }
+    .header-nav, .hea-togggle {
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #home, .projetos, .sobre, .contatos {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contato {
+
+    }
+    .contato p {
+
+    }
+    footer {
+        margin: 0;
+    }                  
+}
+/* ------------- fim resolução 768 */
+
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
     }
 }
