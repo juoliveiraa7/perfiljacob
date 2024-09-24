@@ -64,13 +64,11 @@ i {
     flex-flow: row wrap; /* coloca o conteudo em linha e permite a quebra de linha */
     justify-content: space-between; /* os itens dentro do container flexivel serao distribuidos de
     maneira uniforme ao longo do eixo principal, com espaços iguais entre eles. */
-
-    align-items: center; /* alinhar os itens, seja levados as informações/fotos, em uma direção
-    sendo a direita, esquerda ou meio.*/
-
+    align-items: center; 
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2; /* sobreposição/profundidade */
+    background: var(--primary-bg-color);
 }
 
 .header-logo .logo{
@@ -320,12 +318,12 @@ html [data-theme= 'light'] .logo2 {
         flex-direction: column;
         align-items: flex-start;
     }
-    .contato {
-
+   /*  .contato {
+        font-size: ;
     }
     .contato p {
-        
-    }
+        font-size: ;
+    } */
     footer {
         margin: 0;
     }                  
@@ -404,7 +402,8 @@ html [data-theme= 'light'] .logo2 {
     border-radius: 1rem 1rem 0rem 0rem;
 }
 
-.accordion-header.end, .accordion-item.active .accordion-body.end{
+.accordion-header.end, 
+.accordion-item.active .accordion-body.end{
     border-radius: 0rem 0rem 1rem 1rem;
 }
 
@@ -414,7 +413,7 @@ html [data-theme= 'light'] .logo2 {
 
 
 .accordion-body {
-  /*  display: none; */
+    display: none; 
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
@@ -432,7 +431,41 @@ html [data-theme= 'light'] .logo2 {
 }
 
 /* Rotacionar icone */
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
 
+/* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 3px solid var(--secundary-border-color);
+}
+.contato p {
+    text-align: center;
+}
+
+.contato .btn {
+    width: auto;
+}
+
+/* Roda Pé = Footer */
+footer {
+    margin-bottom: 5rem;
+}
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contato .email {
+    text-transform: uppercase;
+}
 
 @media (min-width: 992px) {
     .projeto-card {
